@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessar Confere Palete</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+  <!-- Container principal -->
+  <div class="text-center bg-white p-10 rounded-3xl shadow-2xl w-full max-w-lg">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Confere Palete</h1>
+    <p class="text-gray-600 mb-8">Clique no botão abaixo para acessar o sistema</p>
+
+    <!-- Botão principal -->
+    <a href="https://inventario-a44dc.web.app/index.html" 
+       class="inline-block w-full bg-yellow-400 text-black font-semibold py-3 rounded-xl hover:bg-yellow-500 active:scale-95 transition transform duration-150 ease-in-out shadow-lg mb-10">
+      Acessar o Sistema
+    </a>
+
+    <!-- Separador -->
+    <div class="border-t border-gray-300 my-8"></div>
+
+    <!-- Título Treinamento -->
+    <h2 class="text-xl font-bold text-gray-700 mb-6">TREINAMENTO</h2>
+
+    <!-- Cards de treinamento menores -->
+    <div class="flex flex-col md:flex-row justify-center gap-4">
+      <!-- Card Cadastro -->
+      <a href="#" class="flex-1 bg-blue-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/add-user-group-man-man.png" alt="Cadastro" class="w-12 h-12 mb-2">
+        <span class="text-white font-medium text-center text-sm">Cadastrar Carga</span>
+      </a>
+
+      <!-- Card Recebimento -->
+      <a href="#" class="flex-1 bg-green-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/in-transit.png" alt="Recebimento" class="w-12 h-12 mb-2">
+        <span class="text-white font-medium text-center text-sm">Recebimento</span>
+      </a>
+
+      <!-- Card Expedição -->
+      <a href="#" class="flex-1 bg-purple-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/shipped.png" alt="Expedição" class="w-12 h-12 mb-2">
+        <span class="text-white font-medium text-center text-sm">Expedição</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 w-full text-center text-gray-400 text-sm p-3">
+    Desenvolvido por Jean Marques®
+  </footer>
+
+</body>
+</html>

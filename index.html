@@ -14,6 +14,17 @@
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen">
 
+  <!-- Modal -->
+  <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50">
+    <div class="bg-white w-full max-w-3xl h-[90vh] rounded-xl shadow-xl flex flex-col">
+      <div class="flex justify-between items-center p-4 border-b">
+        <h3 class="text-lg font-semibold text-gray-700">Treinamento</h3>
+        <button onclick="closePdf()" class="text-red-500 font-bold text-xl">&times;</button>
+      </div>
+      <iframe id="pdfViewer" src="" class="w-full flex-1 rounded-b-xl"></iframe>
+    </div>
+  </div>
+
   <!-- Container principal -->
   <div class="text-center bg-white p-10 rounded-3xl shadow-2xl w-full max-w-lg">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">CONFERE PALETE</h1>
@@ -25,47 +36,53 @@
       Acessar o Sistema
     </a>
 
-    <!-- Separador -->
     <div class="border-t border-gray-300 my-8"></div>
 
-    <!-- Título Treinamento -->
     <h2 class="text-xl font-bold text-gray-700 mb-6">TREINAMENTO</h2>
 
-    <!-- Cards de treinamento menores -->
     <div class="flex flex-col md:flex-row justify-center gap-4">
-      
-      <!-- Card Cadastro -->
-      <a href="https://github.com/jeanmm03/conferepalete/raw/main/TREINAMENTO%20-%20CONFERE%20PALETE%203M%20-%20CADASTRAR%20CARGA.pdf" 
-         target="_blank"
-         class="flex-1 bg-blue-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
-        <img src="https://img.icons8.com/ios-filled/100/ffffff/add-user-group-man-man.png" alt="Cadastro" class="w-12 h-12 mb-2">
+
+      <!-- CARD CADASTRAR CARGA -->
+      <button onclick="openPdf('https://drive.google.com/file/d/1bb1ozlw0t8kXvtDpl_lP__oiVda22VXm/preview')" 
+              class="flex-1 bg-blue-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/add-user-group-man-man.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Cadastrar Carga</span>
-      </a>
+      </button>
 
-      <!-- Card Recebimento -->
-      <a href="https://github.com/jeanmm03/conferepalete/raw/main/TREINAMENTO%20-%20CONFERE%20PALETE%203M%20-%20RECEBIMENTO%20DE%20CARGA.pdf" 
-         target="_blank"
-         class="flex-1 bg-green-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
-        <img src="https://img.icons8.com/ios-filled/100/ffffff/in-transit.png" alt="Recebimento" class="w-12 h-12 mb-2">
+      <!-- CARD RECEBIMENTO -->
+      <button onclick="openPdf('https://drive.google.com/file/d/1wkPzHCMxWhEXg_2yxBplTk29UT8GOaAn/preview')" 
+              class="flex-1 bg-green-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/in-transit.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Recebimento</span>
-      </a>
+      </button>
 
-      <!-- Card Expedição -->
-      <a href="https://github.com/jeanmm03/conferepalete/raw/main/TREINAMENTO%20-%20CONFERE%20PALETE%203M%20-%20EXPEDI%C3%87%C3%83O.pdf" 
-         target="_blank"
-         class="flex-1 bg-purple-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
-        <img src="https://img.icons8.com/ios-filled/100/ffffff/shipped.png" alt="Expedição" class="w-12 h-12 mb-2">
+      <!-- CARD EXPEDIÇÃO -->
+      <button onclick="openPdf('https://drive.google.com/file/d/1U95qLcYz-t-fEmyLSCxb3tTUGx1o4SSy/preview')" 
+              class="flex-1 bg-purple-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/shipped.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Expedição</span>
-      </a>
+      </button>
 
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="fixed bottom-0 left-0 w-full text-center text-gray-400 text-sm p-3">
     Desenvolvido por Jean Marques®
   </footer>
 
+  <script>
+    function openPdf(url) {
+      document.getElementById('pdfViewer').src = url;
+      document.getElementById('pdfModal').classList.remove('hidden');
+      document.getElementById('pdfModal').classList.add('flex');
+    }
+
+    function closePdf() {
+      document.getElementById('pdfModal').classList.add('hidden');
+      document.getElementById('pdfModal').classList.remove('flex');
+      document.getElementById('pdfViewer').src = "";
+    }
+  </script>
+
 </body>
 </html>
-

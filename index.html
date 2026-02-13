@@ -42,40 +42,41 @@
      class="inline-flex items-center justify-center gap-2 w-full bg-gray-800 text-white
             font-semibold py-3 rounded-xl hover:bg-gray-900 active:scale-95
             transition transform duration-150 ease-in-out shadow-lg mt-4">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/qr-code.png" />
-    Imprimir QRCode
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/qr-code.png" />
+      Imprimir QRCode
     </a>
 
     <div class="border-t border-gray-300 my-8"></div>
 
     <h2 class="text-xl font-bold text-gray-700 mb-6">TREINAMENTO</h2>
 
-    <div class="flex flex-col md:flex-row justify-center gap-4 flex-wrap">
+    <!-- GRID RESPONSIVO -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
       <!-- CARD CADASTRAR CARGA -->
       <button onclick="openPdf('https://drive.google.com/file/d/1nvMYBBK9QbXMDagNIdKidm1FK3JlGZXj/preview')" 
-              class="flex-1 bg-blue-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+              class="bg-blue-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
         <img src="https://img.icons8.com/ios-filled/100/ffffff/add-user-group-man-man.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Cadastrar Carga</span>
       </button>
 
       <!-- CARD RECEBIMENTO -->
       <button onclick="openPdf('https://drive.google.com/file/d/1wkPzHCMxWhEXg_2yxBplTk29UT8GOaAn/preview')" 
-              class="flex-1 bg-green-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+              class="bg-green-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
         <img src="https://img.icons8.com/ios-filled/100/ffffff/in-transit.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Recebimento</span>
       </button>
 
       <!-- CARD EXPEDIÇÃO -->
       <button onclick="openPdf('https://drive.google.com/file/d/1U95qLcYz-t-fEmyLSCxb3tTUGx1o4SSy/preview')" 
-              class="flex-1 bg-purple-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+              class="bg-purple-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
         <img src="https://img.icons8.com/ios-filled/100/ffffff/shipped.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Expedição</span>
       </button>
 
-      <!-- NOVO CARD - IMPRESSÃO QR CODE -->
+      <!-- CARD IMPRESSÃO QR CODE -->
       <button onclick="openPdf('https://drive.google.com/file/d/18Eg0TdKExrWMtZ6DMJ1Z5rZJtxMEn1c-/preview')" 
-              class="flex-1 bg-orange-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
+              class="bg-orange-400 rounded-xl p-4 flex flex-col items-center hover:scale-105 transition transform duration-200 shadow">
         <img src="https://img.icons8.com/ios-filled/100/ffffff/qr-code.png" class="w-12 h-12 mb-2">
         <span class="text-white font-medium text-center text-sm">Impressão QRCode</span>
       </button>
